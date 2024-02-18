@@ -8,10 +8,28 @@
 </head>
 <body>
     <div class="container">
-        <h2>Calculator</h2>
+        <h1>Calculator</h1>
+        <h2 id="result"></h2>
         <input type="text" id="number1"/>
         <input type="text" id="number2"/>
-        <button>Add</button>
+        <button id="btn">Add</button>
     </div>
+    
+    <script>
+        const n1 = document.getElementById("number1");
+        const n2 = document.getElementById("number2");
+        const btn = document.getElementById("btn");
+        const res = document.getElementById("result");
+
+        btn.addEventListener("click", event => {
+            const number1 = n1.value;
+            const number2 = n2.value;
+
+            const sum = parseInt(number1) + parseInt(number2);
+
+            res.innerText = sum;
+        });
+
+    </script>
 </body>
 </html>
